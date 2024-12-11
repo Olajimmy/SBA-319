@@ -7,6 +7,8 @@ dotenv.config();
 // import routes
 
 const Job = require("./routes/jobPosting");
+const Login = require("./routes/login");
+const Register = require("./routes/register");
 
 // import db/conn.js
 const db = require("./db/conn");
@@ -100,6 +102,10 @@ app.get("/index", (req, res) => {
 
 //USE THE JobPosting ROUTE
 app.use("/api/jobPosting", Job);
+//USE THE LOGIN ROUTE
+app.use("/api/login", Login);
+// USING THE REGISTER ROUTE
+app.use("/api/register", Register);
 
 // N-NEW for JobPosting
 app.get("/jobPosting/new", (req, res) => {
