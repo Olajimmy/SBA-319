@@ -5,14 +5,17 @@ class Delete extends React.Component {
     //console.log(this.props._id); // Check if the ID is being passed correctly
 
     return (
-      <form
-        action={`/api/jobPosting/remove/${this.props._id}?_method=DELETE`}
-        method="POST"
-      >
-        Enter ID:
-        <input type="text" name="_id" defaultValue={this.props._id} /> <br />
-        <button>Submit</button>
-      </form>
+      <div style={{ backgroundColor: "aquamarine" }}>
+        <h1>We would love if you stay. please dont go.</h1>
+        <form
+          action={`/api/jobPosting/remove/${this.props._id}?_method=DELETE`}
+          method="POST"
+        >
+          Enter ID:
+          <input type="text" name="_id" defaultValue={this.props._id} /> <br />
+          <button>Delete</button>
+        </form>
+      </div>
     );
   }
 }
